@@ -11,8 +11,6 @@ Step 1: Create a Directory
 
 Command:
 
-bash
-
 mkdir tak
 
 Explanation:
@@ -23,8 +21,6 @@ Explanation:
 Step 2: Unzip the Downloaded File
 
 Command:
-
-bash
 
 unzip takserver-docker-5.2-RELEASE-43.zip 
 
@@ -37,8 +33,6 @@ Step 3: Navigate to the Unzipped Directory
 
 Command:
 
-bash
-
 cd takserver-docker-5.2-RELEASE-43/
 
 Explanation:
@@ -49,8 +43,6 @@ Explanation:
 Step 4: Build the Database Docker Image
 
 Command:
-
-bash
 
 docker build -t takserver-db:"$(cat tak/version.txt)" -f docker/Dockerfile.takserver-db .
 
@@ -64,8 +56,6 @@ Step 5: Create a Docker Network
 
 Command:
 
-bash
-
 docker network create takserver-"$(cat tak/version.txt)"
 
 Explanation:
@@ -76,8 +66,6 @@ Explanation:
 Step 6: Run the Database Container
 
 Command:
-
-bash
 
 docker run -d -v $(pwd)/tak:/opt/tak:z -p 5432:5432 --network takserver-"$(cat tak/version.txt)" --name takserver-db takserver-db:"$(cat tak/version.txt)"
 
@@ -92,8 +80,6 @@ Step 7: Build the TAC Server Docker Image
 
 Command:
 
-bash
-
 docker build -t takserver:"$(cat tak/version.txt)" -f docker/Dockerfile.takserver .
 
 Explanation:
@@ -104,8 +90,6 @@ Explanation:
 Step 8: Run the TAC Server Container
 
 Command:
-
-bash
 
 docker run -d -v $(pwd)/tak:/opt/tak:z -p 8089:8089 -p 8443:8443 -p 8444:8444 -p 9000:9000 --network takserver-"$(cat tak/version.txt)" --name takserver takserver:"$(cat tak/version.txt)"
 
@@ -119,8 +103,6 @@ Step 9: List Running Containers
 
 Command:
 
-bash
-
 docker ps
 
 Explanation:
@@ -131,8 +113,6 @@ Explanation:
 Step 10: Stop a Running Container
 
 Command:
-
-bash
 
 docker stop <container_name_or_id>
 
@@ -145,8 +125,6 @@ Step 11: Remove a Stopped Container
 
 Command:
 
-bash
-
 docker rm <container_name_or_id>
 
 Explanation:
@@ -156,4 +134,4 @@ Explanation:
 
 Conclusion
 
-By following these steps, you have successfully created a TAC container using Docker. You’ve learned how to structure your project, build Docker images, and run containers effectively. This knowledge is crucial for managing applications in containerized environments.
+By following these steps, you have successfully created a TAC container using Docker.
