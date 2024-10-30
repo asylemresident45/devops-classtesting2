@@ -1,8 +1,8 @@
 Lab: Creating a TAC Container
+
 Objective
 
-This lab will guide you through the process of creating a TAC container using Docker. You will learn to set up the necessary directory structure, build Docker images, and run the containers.
-Prerequisites
+This lab will guide you through the process of creating a TAC container using Docker. You will learn to set up a docker container running tak.
 
     Docker installed on your machine
     The takserver-docker-5.2-RELEASE-43.zip file downloaded and accessible
