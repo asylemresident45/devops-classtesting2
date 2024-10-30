@@ -1,3 +1,13 @@
+Pre-lab Requirements
+
+go to https://tak.gov
+
+    Create an Account 
+
+at the top of the screen go to Products>other>tak server
+
+
+
 Lab: Creating a TAC Container
 
 Objective
