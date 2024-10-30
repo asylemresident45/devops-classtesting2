@@ -9,9 +9,9 @@ This lab will guide you through the process of creating a TAC container using Do
 
 Step 1: setting up
 
-    A. Start by making a new directory using the mkdir command 
+    Start by making a new directory using the mkdir command 
 
-    B. place the takserver-docker-5.2-Release-43.zip file inside the directory you just created
+    place the takserver-docker-5.2-Release-43.zip file inside the directory you just created
 
 Step 2: Unzip the Downloaded File
 
